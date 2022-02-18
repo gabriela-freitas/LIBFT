@@ -1,32 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gafreita <gafreita@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/25 22:38:48 by gafreita          #+#    #+#             */
-/*   Updated: 2022/02/18 20:45:26 by gafreita         ###   ########.fr       */
+/*   Created: 2022/01/20 22:19:41 by gafreita          #+#    #+#             */
+/*   Updated: 2022/02/18 20:22:44 by gafreita         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
-#include <stdio.h>
-
-size_t	ft_strlen(const char *str)
+int	ft_tolower(int c)
 {
-	size_t	cont;
-
-	cont = 0;
-	while (str[cont] != '\0')
-	{
-		cont ++;
-	}
-	return (cont);
+	if (c >= 'A' && c <= 'Z')
+		c += 32;
+	return (c);
 }
-
 /*
-int main()
+#include <stdio.h>
+int main ()
 {
-	printf("%zu\n",ft_strlen(""));
+	printf("%c",ft_tolower('s'));
+	printf("%c",ft_tolower('A'));
+	printf("%c",ft_tolower('Z'));
+	printf("%c",ft_tolower('5'));
 }*/

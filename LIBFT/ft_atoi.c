@@ -3,16 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gafreita <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: gafreita <gafreita@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/26 17:50:01 by gafreita          #+#    #+#             */
-/*   Updated: 2022/01/26 18:25:32 by gafreita         ###   ########.fr       */
+/*   Created: 2022/02/18 20:43:05 by gafreita          #+#    #+#             */
+/*   Updated: 2022/02/18 20:44:11 by gafreita         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*#include <stdio.h>*/
-
-int	white_spaces(char *str)
+int	white_spaces(const char *str)
 {
 	int	i;
 
@@ -23,7 +21,7 @@ int	white_spaces(char *str)
 	return (i);
 }
 
-int	ft_atoi(char *str)
+int	ft_atoi(const char *str)
 {
 	int	nb;
 	int	i;
@@ -31,11 +29,11 @@ int	ft_atoi(char *str)
 
 	i = white_spaces(str);
 	signal = 1;
-	while (str[i] == '+' || str[i] == '-')
+	if (str[i] == '-' || str[i] == '+')
 	{
 		if (str[i] == '-')
 			signal *= -1;
-		i ++;
+		i++;
 	}
 	nb = 0;
 	while (str[i] != '\0')
@@ -50,8 +48,19 @@ int	ft_atoi(char *str)
 	return (nb);
 }
 /*
+#include <stdlib.h>
+#include <stdio.h>
 int main ()
 {
-	printf("%d\n", ft_atoi(" 	\n--+---+123456789ab567"));
+	printf("%d\n", ft_atoi("-k58s"));
+	printf("%d\n", atoi("-k58s"));
+	printf("%d\n", ft_atoi("	  \n-583xs2323xs"));
+	printf("%d\n", atoi("	  \n-583xs2323xs"));
+	printf("%d\n", ft_atoi("-   58s"));
+	printf("%d\n", atoi("-  58s"));
+	printf("%d\n", ft_atoi("+85s"));
+	printf("%d\n", atoi("+85s"));
+	printf("%d\n", ft_atoi("+-k58s"));
+	printf("%d\n", atoi("+-k58s"));
 	return 0;
 }*/

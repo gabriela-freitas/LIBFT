@@ -6,7 +6,7 @@
 /*   By: gafreita <gafreita@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/31 15:07:50 by gafreita          #+#    #+#             */
-/*   Updated: 2022/02/02 14:30:56 by gafreita         ###   ########.fr       */
+/*   Updated: 2022/02/18 20:44:38 by gafreita         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include <stdio.h>
 #include <errno.h>
 
-int	ft_strlen(char *str)
+static int	ft_strlen(const char *str)
 {
 	int	i;
 
@@ -24,12 +24,12 @@ int	ft_strlen(char *str)
 	return (i);
 }
 
-char	*ft_strdup(char *src)
+char	*ft_strdup(const char *s1)
 {
 	char	*dest;
 	int		i;
 
-	i = ft_strlen(src);
+	i = ft_strlen(s1);
 	dest = (char *)malloc(i * 1);
 	if (dest == NULL)
 	{
@@ -37,9 +37,9 @@ char	*ft_strdup(char *src)
 		return (NULL);
 	}
 	i = 0;
-	while (src[i])
+	while (s1[i])
 	{
-		dest[i] = src[i];
+		dest[i] = s1[i];
 		i++;
 	}
 	dest[i] = '\0';
@@ -48,7 +48,7 @@ char	*ft_strdup(char *src)
 /*
 int main()
 {
-    char src[] = "Bonjour Arnaud ;))";
-    printf("%s\n",ft_strdup(src));
+    char s1[] = "oioi";
+    printf("%s\n",ft_strdup(s1));
     return 0;
 }*/

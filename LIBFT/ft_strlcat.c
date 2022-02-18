@@ -3,18 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gafreita <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: gafreita <gafreita@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/25 22:11:52 by gafreita          #+#    #+#             */
-/*   Updated: 2022/01/27 15:30:07 by gafreita         ###   ########.fr       */
+/*   Updated: 2022/02/18 22:28:24 by gafreita         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-#include <stdio.h>
 #include <strings.h>*/
-
-unsigned int	ft_strlen(char *str)
+//TODO: 
+//FIXME:
+#include <stdio.h>
+static unsigned int	ft_strlen(char *str)
 {
 	unsigned int	cont;
 
@@ -26,38 +27,39 @@ unsigned int	ft_strlen(char *str)
 	return (cont);
 }
 
-unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
+size_t	ft_strlcat(char * restrict dst, const char * restrict src, size_t dstsize)
 {
 	unsigned int	len_d;
 	unsigned int	len_s;
 	unsigned int	i;
 
-	len_d = ft_strlen(dest);
+	len_d = ft_strlen(dst);
 	len_s = ft_strlen(src);
-	if (size < len_d)
-		len_s += size;
+	if (dstsize < len_d)
+		return (dstsize + ft_strlen(src));
+		//i.e if the destsize wich is 
 	else
 		len_s += len_d;
 	i = 0;
-	while (src[i] != '\0' && len_d < size - 1)
+	while (src[i] != '\0' && len_d < dstsize - 1)
 	{
-			dest[len_d] = src[i];
+			dst[len_d] = src[i];
 			i ++;
 			len_d++;
 	}
-	dest[len_d] = '\0';
+	dst[len_d] = '\0';
 	return (len_s);
 }
 
 /*
 int main ()
 {
-    char dest[13] = "Oii";
+    char dst[13] = "Oii";
     char src[7] = "World!";
-	int retorno = ft_strlcat(dest,src,7);
-//	 int retorno = strlcat(dest,src,7);
+	int retorno = ft_strlcat(dst,src,7);
+//	 int retorno = strlcat(dst,src,7);
 
-    printf("\n%d\n%s", retorno,dest);
+    printf("\n%d\n%s", retorno,dst);
     return 0;
 
 }*/
