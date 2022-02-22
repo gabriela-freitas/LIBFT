@@ -6,24 +6,11 @@
 /*   By: gafreita <gafreita@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/25 22:11:52 by gafreita          #+#    #+#             */
-/*   Updated: 2022/02/21 00:59:58 by gafreita         ###   ########.fr       */
+/*   Updated: 2022/02/21 19:31:27 by gafreita         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//FIXME:
-	//reusing functions from my own library ft_strlen
-
-#include <stdio.h>
-
-size_t	ft_strlen(const char *str)
-{
-	size_t	cont;
-
-	cont = 0;
-	while (str[cont] != '\0')
-		cont ++;
-	return (cont);
-}
+#include "libft.h"
 
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {

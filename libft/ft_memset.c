@@ -6,11 +6,11 @@
 /*   By: gafreita <gafreita@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/19 18:13:19 by gafreita          #+#    #+#             */
-/*   Updated: 2022/02/19 19:10:49 by gafreita         ###   ########.fr       */
+/*   Updated: 2022/02/21 19:29:56 by gafreita         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 void	*ft_memset(void *b, int c, size_t len)
 {

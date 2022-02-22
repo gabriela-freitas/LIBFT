@@ -1,36 +1,49 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gafreita <gafreita@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/21 00:05:30 by gafreita          #+#    #+#             */
-/*   Updated: 2022/02/21 19:32:51 by gafreita         ###   ########.fr       */
+/*   Created: 2022/02/21 22:03:30 by gafreita          #+#    #+#             */
+/*   Updated: 2022/02/21 22:56:44 by gafreita         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h> 
+#include<sys/types.h>
+#include<sys/stat.h>
+#include <fcntl.h>  
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+void	ft_putnbr_fd(int n, int fd)
 {
-	char	*str;
-	int		i;
-
-	str = (char *)malloc(len * sizeof(char const));
-	if (str == NULL)
-		return (NULL);
-	i = start;
-	while ((i - start) < len && s[i])
+	if (n == -2147483648)
 	{
-		str[i - start] = s[i];
-		i ++;
+		write(fd, "-2147483648", 11);
+		return ;
 	}
-	str[i - start] = '\0';
-	return (str);
+	if (n < 0)
+	{
+		ft_putchar_fd('-', fd);
+		n *= -1;
+	}
+	if (n > 9)
+	{
+		ft_putnbr_fd(n / 10, fd);
+		ft_putnbr_fd(n % 10, fd);
+	}
+	else
+	{
+		ft_putchar_fd(n + '0', fd);
+	}
 }
 /*
 int	main(void)
 {
-	printf("%s\n", ft_substr("Hello World!", 5, 6));
+	int	fd;
+
+	fd = open("teste.txt", O_WRONLY | O_CREAT);
+	ft_putnbr_fd(2341, fd);
+	close(fd);
 }*/

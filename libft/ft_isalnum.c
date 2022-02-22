@@ -6,17 +6,15 @@
 /*   By: gafreita <gafreita@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/17 18:52:28 by gafreita          #+#    #+#             */
-/*   Updated: 2022/02/17 19:06:55 by gafreita         ###   ########.fr       */
+/*   Updated: 2022/02/21 22:12:14 by gafreita         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 int	ft_isalnum(int c)
 {
-	if ((c >= '0' && c <= '9')
-		|| (c >= 'a' && c <= 'z')
-		|| (c >= 'A' && c <= 'Z'))
-		return (1);
-	return (0);
+	return (ft_isalpha(c) || ft_isdigit(c));
 }
 /*
 #include <stdio.h>

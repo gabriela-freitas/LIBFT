@@ -6,11 +6,11 @@
 /*   By: gafreita <gafreita@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/25 22:38:48 by gafreita          #+#    #+#             */
-/*   Updated: 2022/02/19 17:57:58 by gafreita         ###   ########.fr       */
+/*   Updated: 2022/02/21 19:31:39 by gafreita         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 size_t	ft_strlen(const char *str)
 {

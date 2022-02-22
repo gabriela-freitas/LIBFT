@@ -6,11 +6,11 @@
 /*   By: gafreita <gafreita@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/25 15:08:02 by gafreita          #+#    #+#             */
-/*   Updated: 2022/02/19 18:12:15 by gafreita         ###   ########.fr       */
+/*   Updated: 2022/02/21 19:31:51 by gafreita         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 int	ft_strncmp(char *s1, char *s2, size_t n)
 {

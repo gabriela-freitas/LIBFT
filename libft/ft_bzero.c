@@ -6,11 +6,11 @@
 /*   By: gafreita <gafreita@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/19 19:08:48 by gafreita          #+#    #+#             */
-/*   Updated: 2022/02/21 00:02:01 by gafreita         ###   ########.fr       */
+/*   Updated: 2022/02/21 19:29:13 by gafreita         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 void	ft_bzero(void *s, size_t n)
 {

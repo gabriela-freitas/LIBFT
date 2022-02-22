@@ -6,28 +6,16 @@
 /*   By: gafreita <gafreita@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/20 22:20:38 by gafreita          #+#    #+#             */
-/*   Updated: 2022/02/21 00:59:47 by gafreita         ###   ########.fr       */
+/*   Updated: 2022/02/21 22:11:19 by gafreita         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//FIXME:
-	//reusing functions from my own library ft_strlen
-#include <stdio.h>
+#include "libft.h"
 
-size_t	ft_strlen(const char *str)
+size_t	ft_strlcpy(char *dest, const char *src, size_t dstsize)
 {
-	size_t	cont;
-
-	cont = 0;
-	while (str[cont] != '\0')
-		cont ++;
-	return (cont);
-}
-
-unsigned int	ft_strlcpy(char *dest, const char *src, size_t dstsize)
-{
-	unsigned int	i;
-	unsigned int	src_len;
+	size_t	i;
+	size_t	src_len;
 
 	src_len = ft_strlen(src);
 	i = 0;

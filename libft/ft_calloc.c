@@ -6,14 +6,13 @@
 /*   By: gafreita <gafreita@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/20 23:51:33 by gafreita          #+#    #+#             */
-/*   Updated: 2022/02/21 00:26:24 by gafreita         ###   ########.fr       */
+/*   Updated: 2022/02/22 16:25:43 by gafreita         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
+#include "libft.h"
 
-void	*calloc(size_t count, size_t size)
+void	*ft_calloc(size_t count, size_t size)
 {
 	void	*ptr;
 	size_t	i;

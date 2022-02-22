@@ -1,26 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcmp.c                                        :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gafreita <gafreita@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/20 23:19:13 by gafreita          #+#    #+#             */
-/*   Updated: 2022/02/22 16:25:35 by gafreita         ###   ########.fr       */
+/*   Created: 2022/02/21 21:39:15 by gafreita          #+#    #+#             */
+/*   Updated: 2022/02/21 22:11:58 by gafreita         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/* Outputs the character ’c’ to the given file descriptor.
+ */
+
 #include "libft.h"
 
-int	ft_memcmp(const void *s1, const void *s2, size_t n)
+void	ft_putchar_fd(char c, int fd)
 {
-	int	i;
-
-	if (n == 0)
-		return (0);
-	i = 0;
-	while (*((unsigned char *)s1 + i) == *((unsigned char *)s2 + i)
-		&& i < (int)n - 1)
-		i ++;
-	return (*((unsigned char *)s1 + i) - *((unsigned char *)s2 + i));
+	write(fd, &c, sizeof(char));
 }

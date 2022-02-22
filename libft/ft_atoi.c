@@ -6,11 +6,11 @@
 /*   By: gafreita <gafreita@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/18 20:43:05 by gafreita          #+#    #+#             */
-/*   Updated: 2022/02/18 20:44:11 by gafreita         ###   ########.fr       */
+/*   Updated: 2022/02/21 18:38:36 by gafreita         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	white_spaces(const char *str)
+static int	white_spaces(const char *str)
 {
 	int	i;
 
@@ -48,8 +48,6 @@ int	ft_atoi(const char *str)
 	return (nb);
 }
 /*
-#include <stdlib.h>
-#include <stdio.h>
 int main ()
 {
 	printf("%d\n", ft_atoi("-k58s"));
