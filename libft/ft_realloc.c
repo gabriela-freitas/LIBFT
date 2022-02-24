@@ -1,40 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_realloc.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gafreita <gafreita@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/20 23:08:06 by gafreita          #+#    #+#             */
-/*   Updated: 2022/02/23 21:39:50 by gafreita         ###   ########.fr       */
+/*   Created: 2022/02/23 22:25:56 by gafreita          #+#    #+#             */
+/*   Updated: 2022/02/23 22:57:10 by gafreita         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strrchr(const char *s, int c)
-{
-	int	i;
-	int	hold;
+#include "libft.h"
 
-	hold = -1;
-	i = 0;
-	while (s[i])
-	{
-		if (s[i] == c)
-			hold = i;
-		i ++;
-	}
-	if (hold >= 0)
-		return ((char *)&s[hold]);
-	if (c == 0)
-		return ((char *)&s[i]);
-	return (0);
+char	*ft_realloc(char *old, size_t old_size, size_t new_size)
+{
+	char	*new;
+
+	if (!old)
+		return ((char *)malloc((new_size)));
+	new = (char *)malloc((new_size));
+	if (!new)
+		return (NULL);
+	ft_memcpy(new, old, old_size);
+	free(old);
+	return (new);
 }
-/*
-#include <stdio.h>
-int main ()
-{
-	char s[] = "abcd9efg9hi";
-	int c = '9';
-
-	printf("%s\n", ft_strrchr(s,c));
-}*/

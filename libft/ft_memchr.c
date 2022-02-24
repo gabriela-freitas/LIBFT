@@ -6,7 +6,7 @@
 /*   By: gafreita <gafreita@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/20 23:12:02 by gafreita          #+#    #+#             */
-/*   Updated: 2022/02/21 19:29:42 by gafreita         ###   ########.fr       */
+/*   Updated: 2022/02/23 21:37:12 by gafreita         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,14 @@
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
-	while (i < (int)n)
+	while (i < n)
 	{
-		if (*((unsigned char *)s + i) == c)
+		if (*((char *)s + i) == c)
 			return ((void *)s + i);
-		i ++;
+		i += sizeof(char);
 	}
-	if (c == 0)
-		return ((void *)s + i);
-	return (0);
+	return (NULL);
 }

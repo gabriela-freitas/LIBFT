@@ -6,7 +6,7 @@
 /*   By: gafreita <gafreita@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/22 18:40:44 by gafreita          #+#    #+#             */
-/*   Updated: 2022/02/22 21:38:59 by gafreita         ###   ########.fr       */
+/*   Updated: 2022/02/24 20:55:58 by gafreita         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,16 @@ static int	number_of_digits(long int nb)
 	return (i);
 }
 
+static char	*allocate_zero(void)
+{
+	char	*zero;
+
+	zero = (char *)malloc(2 * sizeof(char));
+	zero[0] = '0';
+	zero[1] = 0;
+	return (zero);
+}
+
 char	*ft_itoa(int n)
 {
 	int			digits;
@@ -51,7 +61,7 @@ char	*ft_itoa(int n)
 
 	nb = (long int)n;
 	if (nb == 0)
-		return ("0");
+		return (allocate_zero());
 	negative = check_negative(&nb);
 	digits = number_of_digits(nb) + 1;
 	if (negative)
@@ -69,10 +79,4 @@ char	*ft_itoa(int n)
 		nb /= 10;
 	}
 	return (number);
-}
-
-int	main(void)
-{
-	printf("%s\n", ft_itoa(2147483647));
-	printf("%s\n", ft_itoa(-2147483648));
 }

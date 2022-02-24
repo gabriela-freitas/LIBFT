@@ -1,14 +1,13 @@
 #include "libft.h"
 #include <stdio.h>
 
-int	main(int ac, char **av)
+int	main()
 {
-	char	**matrix;
+	char	**new;
+	char str[] =  "split this for me !";
+	char sep = ' ';
 
-	if (ac == 3)
-	{
-		matrix = ft_split(av[1], av[2][0]);
-		for (int i = 0; matrix[i] != 0; i ++)
-			printf("%s\n", matrix[i]);
-	}
+	new = ft_split(str, sep);
+	for (int i = 0; new[i] != 0; i ++)
+		printf("%s\n", new[i]);
 }

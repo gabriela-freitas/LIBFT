@@ -6,7 +6,7 @@
 /*   By: gafreita <gafreita@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/21 22:13:32 by gafreita          #+#    #+#             */
-/*   Updated: 2022/02/22 16:25:53 by gafreita         ###   ########.fr       */
+/*   Updated: 2022/02/23 22:26:34 by gafreita         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,5 +51,6 @@ void		ft_striteri(char *s, void (*f)(unsigned int, char*));
 void		ft_putstr_fd(char *s, int fd);
 void		ft_putendl_fd(char *s, int fd);
 void		ft_putnbr_fd(int n, int fd);
+char		*ft_realloc(char *old, size_t old_size, size_t new_size);
 
 #endif

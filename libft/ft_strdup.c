@@ -6,7 +6,7 @@
 /*   By: gafreita <gafreita@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/31 15:07:50 by gafreita          #+#    #+#             */
-/*   Updated: 2022/02/21 19:30:21 by gafreita         ###   ########.fr       */
+/*   Updated: 2022/02/24 16:51:53 by gafreita         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strdup(const char *s1)
 	int		i;
 
 	i = ft_strlen(s1);
-	dest = (char *)malloc(i * 1);
+	dest = (char *)malloc((i + 1) * 1);
 	if (dest == NULL)
 	{
 		errno = ENOMEM;

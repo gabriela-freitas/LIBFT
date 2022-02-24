@@ -6,7 +6,7 @@
 /*   By: gafreita <gafreita@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/21 17:50:53 by gafreita          #+#    #+#             */
-/*   Updated: 2022/02/21 22:13:20 by gafreita         ###   ########.fr       */
+/*   Updated: 2022/02/24 20:46:14 by gafreita         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	int		len;
 	char	*str;
 
+	if (!s1)
+		return (NULL);
 	i = 0;
 	while (s1[i] && ft_strchr(set, s1[i]))
 		i++;

@@ -6,7 +6,7 @@
 /*   By: gafreita <gafreita@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/19 19:13:26 by gafreita          #+#    #+#             */
-/*   Updated: 2022/02/22 16:19:00 by gafreita         ###   ########.fr       */
+/*   Updated: 2022/02/23 21:26:04 by gafreita         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,10 @@
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
 	size_t	i;
-	
-	/*if (!(*((char *)dst)) && !(*((char *)dst)))
-		return (NULL);*/
+
 	i = 0;
+	if (!dst && !src)
+		return (NULL);
 	while (i < n)
 	{
 		*((char *)dst + i) = *((char *)src + i);
