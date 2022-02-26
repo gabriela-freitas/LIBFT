@@ -6,7 +6,7 @@
 /*   By: gafreita <gafreita@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/22 21:57:04 by gafreita          #+#    #+#             */
-/*   Updated: 2022/02/24 22:58:11 by gafreita         ###   ########.fr       */
+/*   Updated: 2022/02/25 17:43:30 by gafreita         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,16 +16,34 @@
 #include "libft.h"
 #include <stdio.h>
 
+static size_t	count_words(char const *s, char c)
+{
+	size_t	words;
+
+	words = 0;
+	while (*s)
+	{
+		while (*s == c && *s != '\0')
+			s++;
+		if (*s != '\0')
+			words ++;
+		while (*s != c && *s != '\0')
+			s ++;
+	}
+	return (words);
+}
+
 char	**ft_split(char const *s, char c)
 {
 	char	**new;
 	size_t	mem;
 	int		len;
 
-	new = malloc(sizeof(char *) + 1);
-	if (!s || !new)
+	if (!s)
 		return (NULL);
-	new[0] = 0;
+	new = malloc(sizeof(char *) * (count_words(s, c) + 1));
+	if (new == NULL)
+		return (NULL);
 	mem = 0;
 	while (*s)
 	{
@@ -34,8 +52,6 @@ char	**ft_split(char const *s, char c)
 			s++;
 		if (*s == '\0')
 			break ;
-		*new = ft_realloc(*new, mem * sizeof(char *),
-				(mem + 1) * sizeof(char *));
 		while (s[len] != c && s[len] != '\0')
 			len ++;
 		new[mem] = ft_substr(s, 0, len);
@@ -44,16 +60,3 @@ char	**ft_split(char const *s, char c)
 	}
 	return (new);
 }
-/*
-#include <stdio.h>
-
-int	main()
-{
-	char	**new;
-	char str[] =  "split this for me !";
-	char sep = ' ';
-
-	new = ft_split(str, sep);
-	for (int i = 0; new[i] != 0; i ++)
-		printf("%s\n", new[i]);
-}*/

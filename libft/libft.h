@@ -6,7 +6,7 @@
 /*   By: gafreita <gafreita@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/21 22:13:32 by gafreita          #+#    #+#             */
-/*   Updated: 2022/02/23 22:26:34 by gafreita         ###   ########.fr       */
+/*   Updated: 2022/02/25 17:55:44 by gafreita         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,12 @@
 
 # include <stdlib.h>
 # include <unistd.h>
+
+typedef struct s_list
+{
+	void			*content;
+	struct s_list	*next;
+}	t_list;
 
 int			ft_atoi(const char *str);
 void		ft_bzero(void *s, size_t n);
