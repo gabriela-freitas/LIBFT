@@ -6,7 +6,7 @@
 /*   By: gafreita <gafreita@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/22 21:57:04 by gafreita          #+#    #+#             */
-/*   Updated: 2022/02/25 17:43:30 by gafreita         ###   ########.fr       */
+/*   Updated: 2022/02/28 20:49:36 by gafreita         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 //FIXME:
 
 #include "libft.h"
-#include <stdio.h>
 
 static size_t	count_words(char const *s, char c)
 {
@@ -36,27 +35,28 @@ static size_t	count_words(char const *s, char c)
 char	**ft_split(char const *s, char c)
 {
 	char	**new;
-	size_t	mem;
-	int		len;
+	int		i;
+	size_t	len;
 
 	if (!s)
 		return (NULL);
 	new = malloc(sizeof(char *) * (count_words(s, c) + 1));
 	if (new == NULL)
 		return (NULL);
-	mem = 0;
+	i = 0;
 	while (*s)
 	{
-		len = 0;
 		while (*s == c && *s != '\0')
 			s++;
 		if (*s == '\0')
 			break ;
-		while (s[len] != c && s[len] != '\0')
-			len ++;
-		new[mem] = ft_substr(s, 0, len);
-		new[++mem] = 0;
+		if (!ft_strchr(s, c))
+			len = ft_strlen(s);
+		else
+			len = ft_strchr(s, c) - s;
+		new[i++] = ft_substr(s, 0, len);
 		s = s + len;
 	}
+	new[i] = NULL;
 	return (new);
 }

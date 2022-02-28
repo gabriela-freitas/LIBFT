@@ -6,7 +6,7 @@
 /*   By: gafreita <gafreita@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/20 22:20:38 by gafreita          #+#    #+#             */
-/*   Updated: 2022/02/24 17:52:01 by gafreita         ###   ########.fr       */
+/*   Updated: 2022/02/28 20:18:19 by gafreita         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,14 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t dstsize)
 			i++;
 		}
 	}
-	if (i || !src_len)
+	if (i || !src_len || dstsize == 1)
 		dest[i] = '\0';
 	return (src_len);
 }
+/*
+int main ()
+{
+	char dest[20] = "coucou";
+	char src[10] = "A";
+	printf("retorno: %zu\nstring: %s", ft_strlcpy(dest,src,1), dest);
+}*/

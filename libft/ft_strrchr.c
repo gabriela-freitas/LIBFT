@@ -6,7 +6,7 @@
 /*   By: gafreita <gafreita@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/20 23:08:06 by gafreita          #+#    #+#             */
-/*   Updated: 2022/02/23 21:39:50 by gafreita         ###   ########.fr       */
+/*   Updated: 2022/02/28 18:44:54 by gafreita         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strrchr(const char *s, int c)
 	i = 0;
 	while (s[i])
 	{
-		if (s[i] == c)
+		if (s[i] == (char) c)
 			hold = i;
 		i ++;
 	}
