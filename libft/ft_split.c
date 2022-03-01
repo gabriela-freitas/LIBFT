@@ -6,7 +6,7 @@
 /*   By: gafreita <gafreita@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/22 21:57:04 by gafreita          #+#    #+#             */
-/*   Updated: 2022/02/28 20:49:36 by gafreita         ###   ########.fr       */
+/*   Updated: 2022/03/01 12:59:32 by gafreita         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ char	**ft_split(char const *s, char c)
 		if (!ft_strchr(s, c))
 			len = ft_strlen(s);
 		else
-			len = ft_strchr(s, c) - s;
+			len = (size_t)ft_strchr(s, c) - (size_t)s;
 		new[i++] = ft_substr(s, 0, len);
 		s = s + len;
 	}

@@ -6,12 +6,11 @@
 /*   By: gafreita <gafreita@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/22 18:40:44 by gafreita          #+#    #+#             */
-/*   Updated: 2022/02/24 20:55:58 by gafreita         ###   ########.fr       */
+/*   Updated: 2022/03/01 13:02:54 by gafreita         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 /*Allocates (with malloc(3))
 and returns a numbering representing the integer received as an argument.
 Negative numbers must be handled.*/
@@ -42,16 +41,6 @@ static int	number_of_digits(long int nb)
 	return (i);
 }
 
-static char	*allocate_zero(void)
-{
-	char	*zero;
-
-	zero = (char *)malloc(2 * sizeof(char));
-	zero[0] = '0';
-	zero[1] = 0;
-	return (zero);
-}
-
 char	*ft_itoa(int n)
 {
 	int			digits;
@@ -61,7 +50,7 @@ char	*ft_itoa(int n)
 
 	nb = (long int)n;
 	if (nb == 0)
-		return (allocate_zero());
+		return (ft_strdup("0"));
 	negative = check_negative(&nb);
 	digits = number_of_digits(nb) + 1;
 	if (negative)

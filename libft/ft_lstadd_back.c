@@ -1,22 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
+/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gafreita <gafreita@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/26 18:50:05 by gafreita          #+#    #+#             */
-/*   Updated: 2022/03/01 13:04:42 by gafreita         ###   ########.fr       */
+/*   Created: 2022/03/01 14:47:57 by gafreita          #+#    #+#             */
+/*   Updated: 2022/03/01 15:40:59 by gafreita         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/* Adds the node ’new’ at the beginning of the list. */
-void	ft_lstadd_front(t_list **lst, t_list *new)
+void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	if (!lst || !new)
+	t_list	*add;
+
+	if (!new)
 		return ;
-	new->next = *lst;
-	*lst = new;
+	if (lst == NULL)
+		add = *lst;
+	else
+		add = ft_lstlast(*lst);
+	add->next = new;
 }
