@@ -15,10 +15,10 @@ ft_lstadd_front.c \
 ft_lstsize.c \
 ft_lstlast.c \
 ft_lstadd_back.c \
-# ft_lstdelone.c \
-# ft_lstclear.c \
-# ft_lstiter.c \
-# ft_lstmap.c \
+ft_lstdelone.c \
+ft_lstclear.c \
+ft_lstiter.c \
+ft_lstmap.c \
 
 OBJS_ALL =	$(SRCS_ALL:.c=.o)
 OBJS_BONUS =	$(SRCS_BONUS:.c=.o)

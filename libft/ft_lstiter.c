@@ -1,21 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
+/*   ft_lstiter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gafreita <gafreita@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/01 14:47:57 by gafreita          #+#    #+#             */
-/*   Updated: 2022/03/02 19:08:03 by gafreita         ###   ########.fr       */
+/*   Created: 2022/03/02 19:20:58 by gafreita          #+#    #+#             */
+/*   Updated: 2022/03/02 19:28:25 by gafreita         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/* Iterates the list ’lst’ and applies the function ’f’
+on the content of each node.*/
+
 #include "libft.h"
 
-void	ft_lstadd_back(t_list **lst, t_list *new)
+void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	if (*lst)
-		ft_lstlast(*lst)->next = new;
-	else
-		*lst = new;
+	if (!lst)
+		return ;
+	while (lst)
+	{
+		(f)(lst->content);
+		lst = lst->next;
+	}
 }

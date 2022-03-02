@@ -6,7 +6,7 @@
 /*   By: gafreita <gafreita@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/21 17:50:53 by gafreita          #+#    #+#             */
-/*   Updated: 2022/02/24 20:46:14 by gafreita         ###   ########.fr       */
+/*   Updated: 2022/03/02 22:27:42 by gafreita         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	while (s1[i] && ft_strchr(set, s1[i]))
 		i++;
 	len = ft_strlen(s1) - 1;
-	while (s1[len] && ft_strchr(set, s1[len]))
+	while (s1[len] && ft_strchr(set, s1[len]) && len > i)
 		len --;
 	str = ft_substr(s1, i, len - i + 1);
 	return (str);
