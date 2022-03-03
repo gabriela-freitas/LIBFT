@@ -6,7 +6,7 @@
 /*   By: gafreita <gafreita@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/18 20:43:05 by gafreita          #+#    #+#             */
-/*   Updated: 2022/02/21 18:38:36 by gafreita         ###   ########.fr       */
+/*   Updated: 2022/03/03 21:04:46 by gafreita         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,18 +47,3 @@ int	ft_atoi(const char *str)
 	nb *= signal;
 	return (nb);
 }
-/*
-int main ()
-{
-	printf("%d\n", ft_atoi("-k58s"));
-	printf("%d\n", atoi("-k58s"));
-	printf("%d\n", ft_atoi("	  \n-583xs2323xs"));
-	printf("%d\n", atoi("	  \n-583xs2323xs"));
-	printf("%d\n", ft_atoi("-   58s"));
-	printf("%d\n", atoi("-  58s"));
-	printf("%d\n", ft_atoi("+85s"));
-	printf("%d\n", atoi("+85s"));
-	printf("%d\n", ft_atoi("+-k58s"));
-	printf("%d\n", atoi("+-k58s"));
-	return 0;
-}*/

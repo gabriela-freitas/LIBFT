@@ -6,15 +6,15 @@
 /*   By: gafreita <gafreita@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/21 22:03:30 by gafreita          #+#    #+#             */
-/*   Updated: 2022/02/21 22:56:44 by gafreita         ###   ########.fr       */
+/*   Updated: 2022/03/03 21:07:33 by gafreita         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h> 
+#include <stdio.h>
 #include<sys/types.h>
 #include<sys/stat.h>
-#include <fcntl.h>  
+#include <fcntl.h>
 
 void	ft_putnbr_fd(int n, int fd)
 {
@@ -38,12 +38,3 @@ void	ft_putnbr_fd(int n, int fd)
 		ft_putchar_fd(n + '0', fd);
 	}
 }
-/*
-int	main(void)
-{
-	int	fd;
-
-	fd = open("teste.txt", O_WRONLY | O_CREAT);
-	ft_putnbr_fd(2341, fd);
-	close(fd);
-}*/

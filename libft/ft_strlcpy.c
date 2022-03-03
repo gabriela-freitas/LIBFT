@@ -6,7 +6,7 @@
 /*   By: gafreita <gafreita@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/20 22:20:38 by gafreita          #+#    #+#             */
-/*   Updated: 2022/02/28 20:18:19 by gafreita         ###   ########.fr       */
+/*   Updated: 2022/03/03 21:08:48 by gafreita         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,10 +31,3 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t dstsize)
 		dest[i] = '\0';
 	return (src_len);
 }
-/*
-int main ()
-{
-	char dest[20] = "coucou";
-	char src[10] = "A";
-	printf("retorno: %zu\nstring: %s", ft_strlcpy(dest,src,1), dest);
-}*/

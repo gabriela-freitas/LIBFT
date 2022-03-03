@@ -6,11 +6,9 @@
 /*   By: gafreita <gafreita@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/21 21:54:02 by gafreita          #+#    #+#             */
-/*   Updated: 2022/02/24 20:59:58 by gafreita         ###   ########.fr       */
+/*   Updated: 2022/03/03 21:07:38 by gafreita         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-/* Outputs the string ’s’ to the given file descriptor. */
 
 #include "libft.h"
 

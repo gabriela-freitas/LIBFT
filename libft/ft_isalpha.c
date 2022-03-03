@@ -6,7 +6,7 @@
 /*   By: gafreita <gafreita@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/19 12:05:18 by gafreita          #+#    #+#             */
-/*   Updated: 2022/02/21 19:25:26 by gafreita         ###   ########.fr       */
+/*   Updated: 2022/03/03 21:05:32 by gafreita         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,16 +19,3 @@ int	ft_isalpha(int c)
 		return (0);
 	return (1);
 }
-/*
-#include <stdio.h>
-
-int main ()
-{
-	printf("%d\n", ft_isalpha('a'));
-	printf("%d\n", ft_isalpha('/'));
-	printf("%d\n", ft_isalpha('F'));
-	printf("%d\n", ft_isalpha('A'));
-	printf("%d\n", ft_isalpha('Z'));
-	printf("%d\n", ft_isalpha('*'));
-	printf("%d\n", ft_isalpha('z'));
-}*/

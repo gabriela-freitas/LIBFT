@@ -6,7 +6,7 @@
 /*   By: gafreita <gafreita@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/19 17:58:46 by gafreita          #+#    #+#             */
-/*   Updated: 2022/02/28 21:21:20 by gafreita         ###   ########.fr       */
+/*   Updated: 2022/03/03 21:09:12 by gafreita         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,15 +32,3 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	}
 	return (NULL);
 }
-/*
-#include <stdio.h>
-
-int	main(void)
-{
-	char	*s1 = "MZIRIBMZIRIBMZE123";
-	char	*s2 = "MZIRIBMZE";
-	char	*retorno = ft_strnstr(s1, s2, ft_strlen(s2));
-
-	printf("%s", retorno);
-	return (0);
-}*/

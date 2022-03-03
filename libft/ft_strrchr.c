@@ -6,7 +6,7 @@
 /*   By: gafreita <gafreita@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/20 23:08:06 by gafreita          #+#    #+#             */
-/*   Updated: 2022/02/28 18:44:54 by gafreita         ###   ########.fr       */
+/*   Updated: 2022/03/03 21:09:18 by gafreita         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,12 +29,3 @@ char	*ft_strrchr(const char *s, int c)
 		return ((char *)&s[i]);
 	return (0);
 }
-/*
-#include <stdio.h>
-int main ()
-{
-	char s[] = "abcd9efg9hi";
-	int c = '9';
-
-	printf("%s\n", ft_strrchr(s,c));
-}*/

@@ -6,7 +6,7 @@
 /*   By: gafreita <gafreita@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/25 22:38:48 by gafreita          #+#    #+#             */
-/*   Updated: 2022/02/21 19:31:39 by gafreita         ###   ########.fr       */
+/*   Updated: 2022/03/03 21:08:52 by gafreita         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,3 @@ size_t	ft_strlen(const char *str)
 		cont ++;
 	return (cont);
 }
-
-/*
-int main()
-{
-	printf("%zu\n",ft_strlen(""));
-}*/

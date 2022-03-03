@@ -6,7 +6,7 @@
 /*   By: gafreita <gafreita@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/21 17:50:53 by gafreita          #+#    #+#             */
-/*   Updated: 2022/03/02 22:27:42 by gafreita         ###   ########.fr       */
+/*   Updated: 2022/03/03 21:09:22 by gafreita         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,10 +29,3 @@ char	*ft_strtrim(char const *s1, char const *set)
 	str = ft_substr(s1, i, len - i + 1);
 	return (str);
 }
-/*
-int main()
-{
-	char s1[] = " xoxoxoxGabi Freitas  oxo xox";
-	char set[] = "x o";
-	printf("%s\n", ft_strtrim(s1, set));
-}*/
