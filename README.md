@@ -1,7 +1,7 @@
 # LIBFT
 <b>First project for 42 Lisboa</b>
 
-<i>"This project is about coding a Clibrary. It will contain a lot of general purpose functions your programs will rely upon."</i>
+<i>"This project is about coding a C library. It will contain a lot of general purpose functions your programs will rely upon."</i>
 
 This is my first project for 42 Lisboa. It will be updated throughout the cursus.
 
