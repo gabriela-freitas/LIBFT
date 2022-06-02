@@ -6,11 +6,22 @@
 /*   By: gafreita <gafreita@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/22 21:57:04 by gafreita          #+#    #+#             */
-/*   Updated: 2022/03/03 21:07:45 by gafreita         ###   ########.fr       */
+/*   Updated: 2022/06/02 21:51:11 by gafreita         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*free the memory allocated for ft_split*/
+void	free_split(char **split)
+{
+	int		i;
+
+	i = -1;
+	while (split[++i])
+		free(split[i]);
+}
+
 
 static size_t	count_words(char const *s, char c)
 {

@@ -6,7 +6,7 @@
 /*   By: gafreita <gafreita@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/21 22:13:32 by gafreita          #+#    #+#             */
-/*   Updated: 2022/03/09 18:45:25 by gafreita         ###   ########.fr       */
+/*   Updated: 2022/06/02 21:51:37 by gafreita         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ int			int_count(long long int n, int len);
 int			ft_u_add(uintptr_t n, char *base);
 int			unsigned_count(unsigned long n, int len);
 int			ft_atoi(const char *str);
+long int	ft_atol(const char *str);
 void		ft_bzero(void *s, size_t n);
 void		*ft_calloc(size_t count, size_t size);
 int			ft_isalnum(int c);
@@ -57,6 +58,7 @@ int			ft_toupper(int c);
 void		ft_putchar_fd(char c, int fd);
 char		*ft_strtrim(char const *s1, char const *set);
 char		**ft_split(char const *s, char c);
+void		free_split(char **split);
 char		*ft_itoa(int n);
 char		*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void		ft_striteri(char *s, void (*f)(unsigned int, char*));
