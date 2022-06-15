@@ -6,7 +6,7 @@
 /*   By: gafreita <gafreita@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/22 21:57:04 by gafreita          #+#    #+#             */
-/*   Updated: 2022/06/02 21:51:11 by gafreita         ###   ########.fr       */
+/*   Updated: 2022/06/11 20:29:41 by gafreita         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,13 @@ void	free_split(char **split)
 {
 	int		i;
 
+	if (!split)
+		return ;
 	i = -1;
 	while (split[++i])
 		free(split[i]);
+	free(split);
 }
-
 
 static size_t	count_words(char const *s, char c)
 {
