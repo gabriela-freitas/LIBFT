@@ -6,7 +6,7 @@
 /*   By: gafreita <gafreita@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/04 20:05:33 by gafreita          #+#    #+#             */
-/*   Updated: 2022/06/15 14:17:08 by gafreita         ###   ########.fr       */
+/*   Updated: 2022/06/15 15:43:07 by gafreita         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,7 +73,7 @@ static int	ft_putnbr_base(long long int n, char *base)
 static int	ft_u_base(unsigned int n, char *base)
 {
 	unsigned int	temp;
-	
+
 	temp = n;
 	if (n >= (unsigned long)ft_strlen(base))
 	{
