@@ -6,11 +6,14 @@
 /*   By: gafreita <gafreita@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/18 20:40:35 by gafreita          #+#    #+#             */
-/*   Updated: 2022/06/18 20:41:43 by gafreita         ###   ########.fr       */
+/*   Updated: 2022/06/18 21:24:55 by gafreita         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+static char	*fill_line(char *buff, char *line);
+static void	reffil_buffer(char *buff);
 
 char	*get_next_line(int fd)
 {
@@ -84,20 +87,4 @@ static void	reffil_buffer(char *buff)
 		}
 		buff[i++] = 0;
 	}
-}
-
-static char	*ft_strchr(const char *s, int c)
-{
-	int	i;
-
-	i = 0;
-	while (s[i])
-	{
-		if (s[i] == (char) c)
-			return ((char *)&s[i]);
-		i ++;
-	}
-	if (c == 0)
-		return ((char *)&s[i]);
-	return (0);
 }
