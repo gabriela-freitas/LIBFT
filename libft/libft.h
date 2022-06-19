@@ -6,7 +6,7 @@
 /*   By: gafreita <gafreita@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/21 22:13:32 by gafreita          #+#    #+#             */
-/*   Updated: 2022/06/18 21:58:38 by gafreita         ###   ########.fr       */
+/*   Updated: 2022/06/19 16:18:32 by gafreita         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 # include <stdint.h>
 
 # ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 1
+#  define BUFFER_SIZE 100
 # endif
 
 typedef struct s_list

@@ -6,7 +6,7 @@
 /*   By: gafreita <gafreita@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/18 20:40:35 by gafreita          #+#    #+#             */
-/*   Updated: 2022/06/18 21:24:55 by gafreita         ###   ########.fr       */
+/*   Updated: 2022/06/19 17:49:59 by gafreita         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,13 +20,11 @@ char	*get_next_line(int fd)
 	static char	buff[BUFFER_SIZE];
 	char		*line;
 	int			check;
-	int			i;
 
 	if (fd < 0 || fd > 1024 || BUFFER_SIZE < 1 || read(fd, 0, 0) == -1)
 		return (NULL);
-	i = 1;
 	line = NULL;
-	while (i)
+	while (1)
 	{
 		check = 1;
 		if (!buff[0])
