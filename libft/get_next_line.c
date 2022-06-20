@@ -6,14 +6,15 @@
 /*   By: gafreita <gafreita@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/18 20:40:35 by gafreita          #+#    #+#             */
-/*   Updated: 2022/06/19 17:49:59 by gafreita         ###   ########.fr       */
+/*   Updated: 2022/06/20 21:44:31 by gafreita         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static char	*fill_line(char *buff, char *line);
-static void	reffil_buffer(char *buff);
+static char		*fill_line(char *buff, char *line);
+static void		reffil_buffer(char *buff);
+static size_t	ft_length(const char *str);
 
 char	*get_next_line(int fd)
 {
@@ -46,7 +47,7 @@ static char	*fill_line(char *buff, char *line)
 
 	i = 0;
 	aux = line;
-	line = malloc(sizeof(char) * (ft_strlen(buff) + ft_strlen(line) + 1));
+	line = malloc(sizeof(char) * (ft_length(buff) + ft_length(line) + 1));
 	if (!line)
 		return (0);
 	j = 0;
@@ -85,4 +86,20 @@ static void	reffil_buffer(char *buff)
 		}
 		buff[i++] = 0;
 	}
+}
+
+static size_t	ft_length(const char *str)
+{
+	size_t	cont;
+
+	cont = 0;
+	if (str == NULL)
+		return (0);
+	while (str[cont] != '\0')
+	{
+		if (str[cont] == '\n')
+			return (cont + 1);
+		cont ++;
+	}
+	return (cont);
 }
