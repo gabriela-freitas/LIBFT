@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gafreita <gafreita@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gafreita <gafreita@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/25 22:11:52 by gafreita          #+#    #+#             */
-/*   Updated: 2022/03/03 21:08:41 by gafreita         ###   ########.fr       */
+/*   Updated: 2022/07/26 23:10:00 by gafreita         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +27,9 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	i = 0;
 	while (src[i] != '\0' && len_d < dstsize - 1)
 	{
-			dst[len_d] = src[i];
-			i ++;
-			len_d++;
+		dst[len_d] = src[i];
+		i ++;
+		len_d++;
 	}
 	dst[len_d] = '\0';
 	return (len_s);
