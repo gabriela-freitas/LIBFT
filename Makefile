@@ -6,7 +6,7 @@
 #    By: gafreita <gafreita@student.42lisboa.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/23 19:37:12 by gafreita          #+#    #+#              #
-#    Updated: 2022/06/23 19:37:13 by gafreita         ###   ########.fr        #
+#    Updated: 2022/08/01 18:32:16 by gafreita         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -69,6 +69,7 @@ CFLAGS = -Wall -Werror -Wextra
 LIB_DIR = include/
 
 COLOUR_GREEN=\033[7;1;32m
+COLOUR_YELLOW=\033[7;1;33m
 COLOUR_END=\033[0m
 
 .c.o:
@@ -88,6 +89,7 @@ clean:
 
 fclean: clean
 	@rm -f $(NAME)
+	@echo "$(COLOUR_YELLOW) LIBFT CLEANED $(COLOUR_END)"
 
 re: fclean all
 
