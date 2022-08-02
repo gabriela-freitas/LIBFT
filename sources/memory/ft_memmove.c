@@ -3,12 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gafreita <gafreita@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gafreita <gafreita@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/19 20:04:20 by gafreita          #+#    #+#             */
-/*   Updated: 2022/03/03 21:07:05 by gafreita         ###   ########.fr       */
+/*   Updated: 2022/08/02 23:13:06 by gafreita         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*
+*   The  memmove()  function  copies  n  bytes from memory area src to
+	memory area dest. The memory areas may overlap: copying takes place as
+    though the bytes in src are first copied into a temporary array that
+	does not overlap src or dest, and the bytes are then copied from  the
+    temporary array to dest.
+*/
 
 #include "libft.h"
 
