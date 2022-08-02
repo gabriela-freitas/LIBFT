@@ -6,7 +6,7 @@
 #    By: gafreita <gafreita@student.42lisboa.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/23 19:37:12 by gafreita          #+#    #+#              #
-#    Updated: 2022/08/01 18:32:16 by gafreita         ###   ########.fr        #
+#    Updated: 2022/08/02 17:57:10 by gafreita         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -52,6 +52,7 @@ SRCS_ALL =	sources/memory/ft_memchr.c \
 			sources/checkers/ft_isprint.c \
 			sources/checkers/ft_isalnum.c \
 			sources/checkers/ft_isalpha.c \
+			sources/checkers/ft_isspace.c \
 			sources/get_next_line/get_next_line.c \
 			sources/print/ft_putstr_fd.c \
 			sources/print/count_printf.c \
